@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/Users/rahulvramesh/workspace/drf/v1/django_api/django_cache',
+    }
+}
+
 
 # Application definition
 
@@ -39,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'rest_framework',
+     'rest_framework.authtoken',
+     'rest_framework_simplejwt',
     'drf_yasg'
 ]
 
